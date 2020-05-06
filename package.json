@@ -12,7 +12,9 @@
   ],
   "main": "app/index.js",
   "scripts": {
-    "test": "ava app/test.js"
+    "test": "ava app/test.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -25,9 +27,11 @@
   },
   "homepage": "https://github.com/marionettejs/marionette-integrations#readme",
   "dependencies": {
-    "yeoman-generator": "^0.23.4"
+    "yeoman-generator": "^0.23.4",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "ava": "^0.15.2"
-  }
+  },
+  "snyk": true
 }
